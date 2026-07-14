@@ -6,3 +6,18 @@ Content-Type: application/json
   "email": "garren@example.com",
   "password": "secure_password"
 }
+
+### Log a New Expense
+POST http://localhost:5157/api/expenses
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "amount": 150.50,
+  "category": "Food",
+  "description": "Weekly grocery run",
+  "date": "2026-07-14T11:00:00Z"
+}
+
+### Get All Expenses for User 1
+GET http://localhost:5157/api/expenses/user/1

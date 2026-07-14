@@ -14,6 +14,8 @@ builder.Services.AddDbContext<FinSightDbContext>(options =>
 // 2. Register the User Repository for Dependency Injection
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 
+builder.Services.AddScoped<IExpenseRepository, ExpenseRepository>();
+
 var app = builder.Build();
 
 app.UseHttpsRedirection();
