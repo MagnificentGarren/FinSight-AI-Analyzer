@@ -1,0 +1,12 @@
+## Build folders
+**/bin/
+**/obj/
+
+## IDE configurations
+.vs/
+.vscode/
+*.user
+*.suo
+
+## User-secrets & local settings
+**/appsettings.Development.json

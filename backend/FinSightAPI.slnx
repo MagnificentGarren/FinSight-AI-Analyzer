@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="FinSightAPI.Api/FinSightAPI.Api.csproj" />
+  <Project Path="FinSightAPI.Application/FinSightAPI.Application.csproj" />
+  <Project Path="FinSightAPI.Domain/FinSightAPI.Domain.csproj" />
+  <Project Path="FinSightAPI.Infrastructure/FinSightAPI.Infrastructure.csproj" />
+</Solution>
