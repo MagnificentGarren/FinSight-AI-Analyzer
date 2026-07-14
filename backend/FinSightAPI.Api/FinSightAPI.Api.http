@@ -21,3 +21,16 @@ Content-Type: application/json
 
 ### Get All Expenses for User 1
 GET http://localhost:5157/api/expenses/user/1
+
+### Set a Budget for Food
+POST http://localhost:5157/api/budgets
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "category": "Food",
+  "limit": 3000.00
+}
+
+### Get All Budgets for User 1
+GET http://localhost:5157/api/budgets/user/1

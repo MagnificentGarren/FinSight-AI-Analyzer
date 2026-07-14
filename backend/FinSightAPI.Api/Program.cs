@@ -16,6 +16,8 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 builder.Services.AddScoped<IExpenseRepository, ExpenseRepository>();
 
+builder.Services.AddScoped<IBudgetRepository, BudgetRepository>();
+
 var app = builder.Build();
 
 app.UseHttpsRedirection();
