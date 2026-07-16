@@ -4,6 +4,7 @@ import ExpenseForm from './ExpenseForm';
 import ExpenseList from './ExpenseList';
 import BudgetForm from './BudgetForm';
 import BudgetList from './BudgetList';
+import Toast, { useToast } from './Toast';
 import './Dashboard.css';
 
 export default function Dashboard({ userId, onLogout }) {
@@ -12,6 +13,7 @@ export default function Dashboard({ userId, onLogout }) {
   const [loadingExpenses, setLoadingExpenses] = useState(false);
   const [loadingBudgets, setLoadingBudgets] = useState(false);
   const [refreshTrigger, setRefreshTrigger] = useState(0);
+  const { toasts, addToast, removeToast } = useToast();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,10 +40,12 @@ export default function Dashboard({ userId, onLogout }) {
   }, [userId, refreshTrigger]);
 
   const handleExpenseAdded = () => {
+    addToast('Expense added successfully!', 'success');
     setRefreshTrigger(prev => prev + 1);
   };
 
   const handleBudgetAdded = () => {
+    addToast('Budget set successfully!', 'success');
     setRefreshTrigger(prev => prev + 1);
   };
 
@@ -98,6 +102,8 @@ export default function Dashboard({ userId, onLogout }) {
           <BudgetList budgets={budgets} expenses={expenses} loading={loadingBudgets} />
         </div>
       </main>
+
+      <Toast toasts={toasts} removeToast={removeToast} />
     </div>
   );
 }
