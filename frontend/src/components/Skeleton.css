@@ -1,0 +1,126 @@
+.skeleton-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+  animation: shimmer 2s infinite;
+}
+
+.skeleton-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.skeleton-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.skeleton-circle-sm {
+  width: 24px;
+  height: 24px;
+}
+
+.skeleton-text {
+  flex: 1;
+  height: 16px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.skeleton-text-sm {
+  width: 60%;
+  height: 14px;
+}
+
+.skeleton-line {
+  height: 12px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.skeleton-line-full {
+  width: 100%;
+}
+
+.skeleton-line-half {
+  width: 50%;
+}
+
+.skeleton-line-sm {
+  width: 80%;
+  height: 10px;
+}
+
+.skeleton-line-xs {
+  width: 60%;
+  height: 8px;
+  margin-top: 4px;
+}
+
+.skeleton-line-md {
+  width: 40%;
+  height: 14px;
+  margin-bottom: 12px;
+}
+
+.skeleton-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skeleton-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.skeleton-content {
+  flex: 1;
+}
+
+.skeleton-form {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skeleton-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .skeleton-row {
+    grid-template-columns: 1fr;
+  }
+}
