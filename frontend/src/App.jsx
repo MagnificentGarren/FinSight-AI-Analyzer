@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import RegisterForm from './components/RegisterForm'
 import Dashboard from './components/Dashboard'
+import ErrorBoundary from './components/ErrorBoundary'
 import './App.css'
 
 function App() {
@@ -36,13 +37,13 @@ function App() {
   }
 
   return (
-    <>
+    <ErrorBoundary>
       {userId ? (
         <Dashboard userId={userId} onLogout={handleLogout} />
       ) : (
         <RegisterForm onRegisterSuccess={handleRegisterSuccess} />
       )}
-    </>
+    </ErrorBoundary>
   )
 }
 
